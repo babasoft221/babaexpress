@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BABA EXPRESS - E-commerce & Livraison Rapide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-truck"></i>
+                    <span>BABA EXPRESS</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#delivery">Livraison</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Rechercher...">
+                    </div>
+                    <div class="cart-icon" id="cartIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Livraison Express<br><span class="highlight">24h/24</span></h1>
+            <p>Commandez en ligne et recevez vos produits en un temps record</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToProducts()">Commander maintenant</button>
+                <button class="btn-secondary">En savoir plus</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>5000+</h3>
+                <p>Commandes livrées</p>
+            </div>
+            <div class="stat">
+                <h3>24h</h3>
+                <p>Livraison express</p>
+            </div>
+            <div class="stat">
+                <h3>98%</h3>
+                <p>Satisfaction client</p>
+            </div>
+        </div>
+    </section> <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Produits Nouveautès</h2>
+            <div class="products-grid" id="productsGrid"> <!-- Produits générés par JS --> </div>
+        </div>
+
+ 
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="delivery">
+        <div class="container">
+            <h2 class="section-title">Service de Livraison Pro</h2>
+            <div class="delivery-content">
+                <div class="delivery-info">
+                    <div class="delivery-feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Livraison 24h</h3>
+                        <p>Recevez votre commande sous 24h partout à Dakar</p>
+                    </div>
+                    <div class="delivery-feature">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Suivi en temps réel</h3>
+                        <p>Suivez votre colis à chaque étape de son parcours</p>
+                    </div>
+                    <div class="delivery-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Garantie satisfaction</h3>
+                        <p>100% remboursé si non satisfait</p>
+                    </div>
+                </div>
+                <div class="delivery-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Couverture Dakar entière</p>
+                        <script>src = "script.js" ></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mon Panier</h3>
+                <span class="close" id="closeCart">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p>Votre panier est vide</p>
+            </div>
+            <div class="cart-total">
+                <h4>Total: <span id="cartTotal">0F</span></h4>
+            </div>
+            <button class="btn-primary checkout-btn">Passer à la caisse</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-truck"></i>
+                        <span>BABA EXPRESS</span>
+                    </div>
+                    <p>Livraison rapide et fiable 24h/24</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Livraison Express</a></li>
+                        <li><a href="#">Suivi Colis</a></li>
+                        <li><a href="#">Points Relais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +221 78 275 95 95</li>
+                        <li><i class="fas fa-envelope"></i> contact@baba-express.sn</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</li>
+                    </ul>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Developed by BABASOFT DAKAR. Tous droits réservés.</p>
