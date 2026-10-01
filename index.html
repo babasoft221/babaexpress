@@ -1,161 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BABA EXPRESS - E-commerce & Livraison Rapide</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>BABA Express — E-commerce & Livraison</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="logo">
-                    <i class="fas fa-truck"></i>
-                    <span>BABA EXPRESS</span>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#products">Produits</a></li>
-                    <li><a href="#delivery">Livraison</a></li>
-                    <li><a href="#about">À propos</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="nav-icons">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Rechercher...">
-                    </div>
-                    <div class="cart-icon" id="cartIcon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </div>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo" aria-label="BABA Express">
+          <img src="logo-baba-express.jpeg" alt="BABA Express">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home">Accueil</a></li>
+          <li><a href="#products">Produits</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#delivery">Livraison</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <button class="icon-btn" id="voiceSearchBtn" title="Recherche vocale" aria-label="Recherche vocale"><i class="fas fa-microphone"></i></button>
+          <button class="icon-btn" id="themeToggle" title="Mode sombre" aria-label="Activer le mode sombre"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn account-btn" id="accountBtn" title="Connexion"><i class="fas fa-user"></i></button>
+          <button class="cart-icon" id="cartIcon" title="Panier" aria-label="Ouvrir le panier">
+            <i class="fas fa-shopping-cart"></i><span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
+  <main>
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Livraison Express<br><span class="highlight">24h/24</span></h1>
-            <p>Commandez en ligne et recevez vos produits en un temps record</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="scrollToProducts()">Commander maintenant</button>
-                <button class="btn-secondary">En savoir plus</button>
-            </div>
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="home-banners" id="homeBanners" aria-label="Offres à la une">
+        <article class="home-banner active" style="--banner-image:url('iphone15pro.jpeg')"><div><span>TECH & MOBILITÉ</span><h2>Vos produits premium, livrés à Dakar</h2><a href="#products" class="banner-btn">Découvrir</a></div></article>
+        <article class="home-banner" style="--banner-image:url('casquesony.jpeg')"><div><span>AUDIO</span><h2>Son immersif avec Sony & JBL</h2><a href="#products" class="banner-btn">Voir les produits</a></div></article>
+        <article class="home-banner" style="--banner-image:url('pizza.jpeg')"><div><span>RESTAURANT</span><h2>Commandez et faites-vous livrer</h2><a href="#products" class="banner-btn">Commander</a></div></article>
+        <div class="banner-dots" id="bannerDots"><button class="active" data-slide="0" aria-label="Affiche 1"></button><button data-slide="1" aria-label="Affiche 2"></button><button data-slide="2" aria-label="Affiche 3"></button></div>
+      </div>
+      <div class="hero-content">
+        <span class="eyebrow"><i class="fas fa-bolt"></i> BABA Express Dakar</span>
+        <h1>Livraison Express<br><span class="highlight">24h/24</span></h1>
+        <p>Commandez vos produits, réservez une course ou un taxi privé et recevez un service rapide et fiable.</p>
+        <div class="hero-buttons">
+          <button class="btn-primary" onclick="scrollToProducts()">Commander maintenant</button>
+          <a class="btn-secondary" href="#services">Découvrir les services</a>
         </div>
-        <div class="hero-stats">
-            <div class="stat">
-                <h3>5000+</h3>
-                <p>Commandes livrées</p>
-            </div>
-            <div class="stat">
-                <h3>24h</h3>
-                <p>Livraison express</p>
-            </div>
-            <div class="stat">
-                <h3>98%</h3>
-                <p>Satisfaction client</p>
-            </div>
-        </div>
-    </section> <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title">Produits Nouveautès</h2>
-            <div class="products-grid" id="productsGrid"> <!-- Produits générés par JS --> </div>
-        </div>
-
- 
+      </div>
+      <div class="hero-stats">
+        <div class="stat glass-3d"><h3>5000+</h3><p>Commandes livrées</p></div>
+        <div class="stat glass-3d"><h3>24h</h3><p>Service express</p></div>
+        <div class="stat glass-3d"><h3>98%</h3><p>Satisfaction client</p></div>
+      </div>
     </section>
 
-    <!-- Delivery Section -->
-    <section id="delivery" class="delivery">
-        <div class="container">
-            <h2 class="section-title">Service de Livraison Pro</h2>
-            <div class="delivery-content">
-                <div class="delivery-info">
-                    <div class="delivery-feature">
-                        <i class="fas fa-shipping-fast"></i>
-                        <h3>Livraison 24h</h3>
-                        <p>Recevez votre commande sous 24h partout à Dakar</p>
-                    </div>
-                    <div class="delivery-feature">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3>Suivi en temps réel</h3>
-                        <p>Suivez votre colis à chaque étape de son parcours</p>
-                    </div>
-                    <div class="delivery-feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Garantie satisfaction</h3>
-                        <p>100% remboursé si non satisfait</p>
-                    </div>
-                </div>
-                <div class="delivery-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map"></i>
-                        <p>Couverture Dakar entière</p>
-                        <script>src = "script.js" ></script>
-                    </div>
-                </div>
-            </div>
+    <section id="products" class="products section-3d">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Boutique</span><h2 class="section-title">Produits Nouveautés</h2></div>
+          <span class="product-counter" id="productCounter"></span>
         </div>
+        <div class="product-search-wrap">
+          <i class="fas fa-search"></i>
+          <input id="productSearch" type="search" placeholder="Rechercher un produit : iPhone, Sony, JBL..." autocomplete="off">
+          <button id="clearSearch" title="Effacer"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="category-filters" id="categoryFilters"></div>
+        <div class="category-shortcuts" aria-label="Catégories principales">
+          <button class="category-shortcut" data-shortcut="Téléviseur"><i class="fas fa-tv"></i><span>Téléviseurs</span></button>
+          <button class="category-shortcut" data-shortcut="Produits bio"><i class="fas fa-leaf"></i><span>Produits bio</span></button>
+          <button class="category-shortcut" data-shortcut="Cosmétiques"><i class="fas fa-spa"></i><span>Cosmétiques</span></button>
+          <button class="category-shortcut" data-shortcut="Vêtements"><i class="fas fa-shirt"></i><span>Vêtements</span></button>
+          <button class="category-shortcut" data-shortcut="Chaussures"><i class="fas fa-shoe-prints"></i><span>Chaussures</span></button>
+          <button class="category-shortcut" data-shortcut="Restaurant"><i class="fas fa-utensils"></i><span>Restaurant</span></button>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="empty-state" id="emptyProducts" hidden><i class="fas fa-box-open"></i><h3>Aucun produit trouvé</h3><p>Essayez un autre mot-clé ou une autre catégorie.</p></div>
+      </div>
     </section>
 
-    <!-- Cart Modal -->
-    <div class="modal" id="cartModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Mon Panier</h3>
-                <span class="close" id="closeCart">&times;</span>
-            </div>
-            <div class="cart-items" id="cartItems">
-                <p>Votre panier est vide</p>
-            </div>
-            <div class="cart-total">
-                <h4>Total: <span id="cartTotal">0F</span></h4>
-            </div>
-            <button class="btn-primary checkout-btn">Passer à la caisse</button>
+    <section id="services" class="services section-3d">
+      <div class="container">
+        <div class="section-heading centered"><span class="eyebrow">Mobilité</span><h2 class="section-title">Nos services</h2><p>Deux espaces rapides pour vos déplacements et vos courses.</p></div>
+        <div class="service-grid">
+          <article class="service-card glass-3d">
+            <div class="service-icon"><i class="fas fa-motorcycle"></i></div><span class="service-badge">Express</span>
+            <h3>Course rapide</h3><p>Demandez une course pour récupérer ou déposer un colis à Dakar.</p>
+            <button class="btn-primary service-open" data-service="course">Réserver une course</button>
+          </article>
+          <article class="service-card glass-3d">
+            <div class="service-icon"><i class="fas fa-taxi"></i></div><span class="service-badge">Privé</span>
+            <h3>Taxi privé</h3><p>Réservez un trajet privé avec prise en charge et destination.</p>
+            <button class="btn-primary service-open" data-service="taxi">Réserver un taxi</button>
+          </article>
+          <article class="service-card glass-3d">
+            <div class="service-icon"><i class="fas fa-shield-halved"></i></div><span class="service-badge">Protection</span>
+            <h3>Assurances</h3><p>Découvrez un espace de demande pour assurances auto, habitation, santé, voyage, commerce et autres besoins.</p>
+            <button class="btn-primary service-open" data-service="insurance">Demander une assurance</button>
+          </article>
+          <article class="service-card glass-3d">
+            <div class="service-icon"><i class="fas fa-building"></i></div><span class="service-badge">Dakar</span>
+            <h3>Appartement meublé</h3><p>Recherchez un appartement meublé selon votre zone, votre budget et la durée de location à Dakar.</p>
+            <button class="btn-primary service-open" data-service="apartment">Chercher un appartement</button>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <section id="delivery" class="delivery section-3d">
+      <div class="container">
+        <div class="section-heading centered"><span class="eyebrow">Logistique</span><h2 class="section-title">Livraison & suivi</h2><p>Carte interactive et suivi de colis depuis votre navigateur.</p></div>
+        <div class="delivery-content">
+          <div class="delivery-info">
+            <div class="delivery-feature glass-3d"><i class="fas fa-shipping-fast"></i><div><h3>Livraison 24h</h3><p>Recevez votre commande partout à Dakar.</p></div></div>
+            <div class="delivery-feature glass-3d"><i class="fas fa-location-crosshairs"></i><div><h3>Position en temps réel</h3><p>Autorisez la géolocalisation pour afficher votre position.</p></div></div>
+            <div class="delivery-feature glass-3d"><i class="fas fa-shield-alt"></i><div><h3>Service sécurisé</h3><p>Vos informations restent dans votre navigateur pour ce prototype.</p></div></div>
+          </div>
+          <div class="delivery-map card-3d"><div id="liveMap" class="live-map"></div><div class="map-actions"><button class="btn-locate" id="locateBtn"><i class="fas fa-location-crosshairs"></i> Voir ma position</button><a class="btn-map-link" href="https://www.google.com/maps/search/?api=1&query=Dakar%2C%20Senegal" target="_blank" rel="noopener"><i class="fab fa-google"></i> Ouvrir Google Maps</a></div><p class="map-status" id="mapStatus">Centre : Dakar, Sénégal</p></div>
+        </div>
+        <div class="tracking-box card-3d">
+          <h3><i class="fas fa-box"></i> Suivre mon colis</h3>
+          <div class="tracking-form"><input type="text" id="trackingInput" placeholder="N° de suivi (ex : BE-10234)"><button class="btn-primary" id="trackBtn">Suivre</button></div>
+          <div class="tracking-result" id="trackingResult" hidden><ul class="tracking-timeline" id="trackingTimeline"></ul><div id="trackingMap" class="tracking-map"></div><p class="eta-text" id="etaText"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-3d"><div class="container"><div class="about-card glass-3d"><span class="eyebrow">BABA Express</span><h2 class="section-title">Un service pensé pour Dakar</h2><p>BABA Express combine e-commerce, livraison, course rapide et taxi privé dans une interface moderne, responsive et simple à utiliser.</p><div class="about-pills"><span><i class="fas fa-mobile-alt"></i> Mobile friendly</span><span><i class="fas fa-bolt"></i> Rapide</span><span><i class="fas fa-map-marked-alt"></i> Suivi</span></div></div></div></section>
+  </main>
+
+
+  <!-- Détails produit -->
+  <div class="modal product-details-modal" id="productDetailsModal" aria-hidden="true">
+    <div class="modal-content product-details-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-circle-info"></i> Détails du produit</h3>
+        <button class="close" id="closeProductDetails" aria-label="Fermer">&times;</button>
+      </div>
+      <div id="productDetailsBody" class="product-details-body"></div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="logo">
-                        <i class="fas fa-truck"></i>
-                        <span>BABA EXPRESS</span>
-                    </div>
-                    <p>Livraison rapide et fiable 24h/24</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Livraison Express</a></li>
-                        <li><a href="#">Suivi Colis</a></li>
-                        <li><a href="#">Points Relais</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +221 78 275 95 95</li>
-                        <li><i class="fas fa-envelope"></i> contact@baba-express.sn</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</li>
-                    </ul>
-                    <script src="script.js"></script>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Developed by BABASOFT DAKAR. Tous droits réservés.</p>
+  <!-- Panier -->
+  <div class="modal" id="cartModal" aria-hidden="true"><div class="modal-content cart-modal-content"><div class="modal-header"><h3><i class="fas fa-shopping-cart"></i> Mon Panier</h3><button class="close" id="closeCart" aria-label="Fermer">&times;</button></div><div class="cart-items" id="cartItems"></div><div class="cart-total"><span>Total</span><strong id="cartTotal">0 F</strong></div><div class="delivery-form"><h4>Informations de livraison</h4><input type="text" id="customerName" placeholder="Nom complet"><input type="tel" id="customerPhone" placeholder="Numéro de téléphone"><textarea id="deliveryAddress" placeholder="Adresse de livraison (quartier, rue, ville...)" rows="2"></textarea><select id="paymentMethod"><option value="À la livraison">Paiement à la livraison</option><option value="Wave">Wave</option><option value="Orange Money">Orange Money</option></select></div><button class="btn-primary checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Valider la commande</button></div></div>
+
+  <!-- Ticket -->
+  <div class="modal" id="ticketModal" aria-hidden="true"><div class="modal-content ticket-content"><div class="modal-header"><h3>Ticket de commande</h3><button class="close" id="closeTicket" aria-label="Fermer">&times;</button></div><div id="ticketBody"></div><button class="btn-primary" id="printTicketBtn"><i class="fas fa-print"></i> Imprimer / Enregistrer</button></div></div>
+
+  <!-- Auth -->
+  <div class="modal" id="authModal" aria-hidden="true"><div class="modal-content auth-content"><div class="modal-header"><h3 id="authTitle">Connexion</h3><button class="close" id="closeAuth">&times;</button></div><div class="auth-tabs"><button class="auth-tab active" data-auth="login">Connexion</button><button class="auth-tab" data-auth="register">Inscription</button></div><form id="authForm"><input id="authName" type="text" placeholder="Nom complet" class="register-only" hidden><input id="authEmail" type="email" placeholder="Email" required><input id="authPassword" type="password" placeholder="Mot de passe" minlength="4" required><button class="btn-primary" type="submit" id="authSubmit">Se connecter</button></form><p class="auth-note">Mode démo : les données du compte sont enregistrées localement dans votre navigateur.</p></div></div>
+
+  <!-- Service -->
+  <div class="modal" id="serviceModal" aria-hidden="true"><div class="modal-content"><div class="modal-header"><h3 id="serviceTitle">Réserver</h3><button class="close" id="closeService">&times;</button></div><form id="serviceForm" class="service-form"><input id="serviceName" type="text" placeholder="Nom complet" required><input id="servicePhone" type="tel" placeholder="Téléphone" required><div id="serviceDynamicFields"><input id="servicePickup" type="text" placeholder="Lieu de départ" required><input id="serviceDestination" type="text" placeholder="Destination" required><input id="serviceDate" type="datetime-local" required></div><textarea id="serviceNote" placeholder="Détails supplémentaires" rows="3"></textarea><button class="btn-primary" type="submit"><i class="fas fa-check"></i> Confirmer la demande</button></form></div></div>
+
+  <section class="partners-section" aria-label="Partenaires">
+    <div class="container"><div class="section-heading centered"><span class="eyebrow">Écosystème</span><h2 class="section-title">Nos partenaires</h2><p>Un bandeau de logos défilant pour présenter vos partenaires et solutions.</p></div>
+      <div class="partners-marquee"><div class="partners-track">
+        <div class="partner-logo wave-logo"><img src="wave-senegal-mobile-money.webp" alt="Wave"><strong>Wave</strong></div>
+        <div class="partner-logo orange-logo"><img src="orange-money-et-wave-768x446.jpeg" alt="Orange Money"><strong>Orange Money</strong></div>
+        <div class="partner-logo text-logo"><i class="fas fa-truck-fast"></i><strong>Express Partner</strong></div>
+        <div class="partner-logo text-logo"><i class="fas fa-store"></i><strong>Commerce Partner</strong></div>
+        <div class="partner-logo text-logo"><i class="fas fa-building"></i><strong>Immo Partner</strong></div>
+        <div class="partner-logo text-logo"><i class="fas fa-shield-halved"></i><strong>Assurance Partner</strong></div>
+        <div class="partner-logo wave-logo"><img src="wave-senegal-mobile-money.webp" alt="Wave"><strong>Wave</strong></div>
+        <div class="partner-logo orange-logo"><img src="orange-money-et-wave-768x446.jpeg" alt="Orange Money"><strong>Orange Money</strong></div>
+        <div class="partner-logo text-logo"><i class="fas fa-truck-fast"></i><strong>Express Partner</strong></div>
+        <div class="partner-logo text-logo"><i class="fas fa-store"></i><strong>Commerce Partner</strong></div>
+      </div></div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact"><div class="container"><div class="footer-content"><div class="footer-section"><a href="#home" class="logo footer-logo"><img src="logo-baba-express.jpeg" alt="BABA Express"></a><p>Livraison rapide et fiable 24h/24</p><p>Paiement Wave et Orange Money</p></div><div class="footer-section"><h4>Services</h4><ul><li><a href="#delivery">Livraison Express</a></li><li><a href="#delivery">Suivi Colis</a></li><li><a href="#services">Course rapide</a></li><li><a href="#services">Taxi privé</a></li></ul></div><div class="footer-section"><h4>Contact</h4><ul><li><i class="fas fa-phone"></i> +221 78 275 95 95</li><li><i class="fas fa-envelope"></i> contact@baba-express.sn</li><li><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 Developed by BABASOFT DAKAR. Tous droits réservés.</p></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+                      
