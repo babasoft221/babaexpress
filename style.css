@@ -10,7 +10,7 @@ html{scroll-behavior:smooth}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sa
 .footer{background:var(--primary);color:#fff;padding:3rem 0 1rem}.footer-content{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2rem}.footer-section h4{margin-bottom:1rem;color:var(--accent2)}.footer-section ul{list-style:none}.footer-section ul li{margin-bottom:.5rem}.footer-section a{color:rgba(255,255,255,.85);text-decoration:none}.footer-section a:hover{color:var(--accent2)}.footer-bottom{text-align:center;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:.85rem}
 body.dark-theme{--text:#e5e7eb;--muted:#aeb8c7;--surface:#0b1220;--surface2:#111a2b;--border:#26344a;background:#0b1220}body.dark-theme .header{box-shadow:0 8px 30px rgba(0,0,0,.35)}body.dark-theme .nav-menu a{color:#fff}body.dark-theme .product-image{background:linear-gradient(145deg,#182235,#0e1625)}body.dark-theme .glass-3d{background:rgba(17,26,43,.75);border-color:rgba(255,255,255,.08)}body.dark-theme .btn-secondary{background:rgba(11,18,32,.65);color:#fff;border-color:rgba(255,255,255,.15)}body.dark-theme .hero-content p{color:#26334a}body.dark-theme .hero-stats .stat p{color:#334155}
 @keyframes cardIn{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
-@media(max-width:900px){.nav-menu{gap:.8rem}.nav-menu a{font-size:.88rem}.delivery-content{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.nav-menu{ gap:.8rem}.nav-menu a{font-size:.88rem}.delivery-content{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.navbar{padding:.5rem 0}.logo img{width:125px;height:42px}.nav-icons{margin-left:auto}.nav-menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--primary);padding:1rem 1.2rem;gap:.3rem;box-shadow:0 10px 20px rgba(0,0,0,.2)}.nav-menu.active{display:flex}.nav-menu a{display:block;padding:.7rem}.hamburger{display:flex}.hero{padding-top:125px;min-height:620px}.hero-stats{margin-top:2rem}.stat{min-width:135px;padding:.9rem}.stat h3{font-size:1.4rem}.section-3d{padding:75px 0}.products-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.product-image{height:185px}.product-info{padding:1rem}.product-info h3{font-size:1rem}.product-price{font-size:1.1rem}.section-heading{align-items:flex-start;flex-direction:column}.footer-content{grid-template-columns:1fr}.footer-logo img{width:185px;height:62px}.tracking-timeline{overflow-x:auto;gap:.6rem}.tracking-timeline li{min-width:100px}.modal{padding:10px}.modal-content{width:96%;max-height:92vh}}
 @media(max-width:600px){.map-actions{grid-template-columns:1fr}}
 @media(max-width:480px){.logo img{width:110px;height:38px}.icon-btn,.cart-icon{width:38px;height:38px}.hero-content h1{font-size:2.25rem}.hero-content p{font-size:1rem}.hero-buttons .btn-primary,.hero-buttons .btn-secondary{width:100%}.hero-stats{gap:.5rem}.stat{min-width:100px}.stat p{font-size:.75rem}.products-grid{grid-template-columns:1fr}.product-image{height:220px}.category-filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:.4rem}.category-btn{white-space:nowrap}.cart-item{grid-template-columns:48px 1fr auto}.cart-item img{width:48px;height:48px}.ticket-actions{flex-direction:column}}
@@ -236,31 +236,78 @@ body.dark-theme .partners-section{background:var(--surface2)}body.dark-theme .pa
 @media(max-width:768px){.home-banners{height:225px;width:calc(100% - 24px);margin-bottom:22px;border-radius:22px}.home-banner{padding:22px;background-image:linear-gradient(90deg,rgba(30,58,138,.96),rgba(30,58,138,.68)),var(--banner-image)}.home-banner h2{font-size:1.55rem}.partner-logo{min-width:165px;height:68px}.partners-section{padding-top:55px}}
 @media(max-width:480px){.home-banners{height:205px}.home-banner{padding:18px}.home-banner h2{font-size:1.35rem}.banner-btn{padding:.62rem .9rem;font-size:.88rem}}
 
-/* Cartes description & détails produits */
-.product-description{color:var(--muted);font-size:.86rem;line-height:1.5;margin:.55rem 0 .8rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
-.product-actions{display:grid;grid-template-columns:1fr 1.2fr;gap:.55rem;margin-top:.7rem}
-.product-details-btn,.product-add{min-height:44px;border-radius:12px;font-weight:800;cursor:pointer;transition:.25s;display:flex;align-items:center;justify-content:center;gap:.4rem}
-.product-details-btn{border:1px solid var(--border);background:var(--surface);color:var(--primary)}
-.product-details-btn:hover{background:var(--surface2);transform:translateY(-2px)}
-.product-add{border:0}
-.product-details-modal{z-index:1200}
-.product-details-content{max-width:900px;width:calc(100% - 30px);max-height:90vh;overflow:auto}
-.product-details-body{padding:.4rem 0}
-.product-detail-layout{display:grid;grid-template-columns:minmax(280px,.9fr) minmax(320px,1.1fr);gap:2rem;align-items:center}
-.product-detail-image{min-height:360px;border-radius:22px;overflow:hidden;background:var(--surface2);display:grid;place-items:center;border:1px solid var(--border)}
-.product-detail-image img{width:100%;height:360px;object-fit:cover;display:block}
-.product-detail-info h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.15;margin:.4rem 0 .65rem}
-.detail-category{display:inline-flex;padding:.35rem .7rem;border-radius:999px;background:rgba(249,115,22,.12);color:var(--accent);font-size:.75rem;font-weight:800;text-transform:uppercase}
-.detail-rating{margin-bottom:.5rem}
-.detail-rating span{color:var(--muted);margin-left:.45rem}
-.detail-price{font-size:1.75rem;font-weight:900;color:var(--primary);margin:.5rem 0 1rem}
-.product-detail-info h4{font-size:1rem;margin-top:.8rem}
-.detail-description{color:var(--muted);line-height:1.75}
-.detail-specs{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:1.1rem 0}
-.detail-specs>div{padding:.75rem;border:1px solid var(--border);border-radius:14px;background:var(--surface2)}
-.detail-specs span{display:block;font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.detail-specs strong{display:block;margin-top:.2rem}
-.available{color:#16a34a}
-.available i{font-size:.55rem;vertical-align:middle}
-.detail-add{width:100%;margin-top:.3rem}
-@media(max-width:700px){.product-actions{grid-template-columns:1fr}.product-detail-layout{grid-template-columns:1fr;gap:1rem}.product-detail-image,.product-detail-image img{height:260px;min-height:260px}.detail-specs{grid-template-columns:1fr 1fr}}
+/* --- Correctifs panier / favoris / toast --- */
+.product-card{transform-style:flat!important}.product-image{transform:none!important}
+.product-add{position:relative;z-index:5;touch-action:manipulation}
+.fav-btn{position:absolute;top:12px;left:12px;z-index:3;width:38px;height:38px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#9ca3af;cursor:pointer;font-size:1rem;box-shadow:0 4px 12px rgba(0,0,0,.15)}.fav-btn.active{color:#ef4444}
+.clear-cart{display:block;margin:0 1.4rem .6rem auto;border:0;background:transparent;color:#ef4444;font-weight:700;cursor:pointer;text-decoration:underline}.clear-cart[hidden]{display:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);background:#111827;color:#fff;padding:12px 18px;border-radius:30px;font-weight:700;z-index:3000;opacity:0;pointer-events:none;transition:.3s;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+
+
+/* Bandeau catégories sous le navbar */
+.category-marquee{
+  position:fixed;
+  top:68px;
+  left:0;
+  width:100%;
+  z-index:999;
+  overflow:hidden;
+  background:var(--header);
+  border-top:1px solid rgba(255,255,255,.10);
+  border-bottom:1px solid rgba(255,255,255,.14);
+  box-shadow:0 5px 18px rgba(0,0,0,.14);
+}
+.category-marquee-track{
+  display:flex;
+  width:max-content;
+  animation:categoryScroll 28s linear infinite;
+}
+.category-marquee-group{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 10px;
+  flex-shrink:0;
+}
+.category-marquee .category-shortcut{
+  min-height:42px;
+  height:42px;
+  min-width:max-content;
+  padding:7px 16px;
+  flex-direction:row;
+  gap:8px;
+  border-radius:999px;
+  background:var(--surface);
+  color:var(--text);
+  white-space:nowrap;
+  box-shadow:none;
+}
+.category-marquee .category-shortcut i{font-size:1rem}
+.category-marquee:hover .category-marquee-track{animation-play-state:paused}
+@keyframes categoryScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+/* Le contenu commence sous les deux barres fixes */
+.hero{padding-top:210px}
+@media(max-width:1000px){
+  .category-marquee{top:68px}
+  .category-marquee-group{gap:7px;padding:7px}
+  .category-marquee .category-shortcut{height:40px;min-height:40px;padding:6px 13px;font-size:.85rem}
+  .hero{padding-top:205px}
+}
+@media(max-width:600px){
+  .category-marquee{top:64px}
+  .category-marquee-track{animation-duration:24s}
+  .category-marquee .category-shortcut{height:38px;min-height:38px;padding:5px 12px;font-size:.8rem}
+  .hero{padding-top:190px}
+}
+
+.subscribe-btn{border:0;background:var(--primary);color:#fff;padding:.62rem .9rem;border-radius:999px;display:inline-flex;align-items:center;gap:.4rem;font-weight:800;cursor:pointer;white-space:nowrap;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:transform .2s ease,opacity .2s ease}.subscribe-btn:hover{transform:translateY(-1px);opacity:.92}.subscribe-btn i{font-size:.85rem}@media(max-width:760px){.subscribe-btn span{display:none}.subscribe-btn{width:38px;height:38px;justify-content:center;padding:0}.nav-icons{gap:.35rem}}
+
+/* Logo texte BABA EXPRESS SENEGAL */
+.brand-logo{display:flex;flex-direction:column;justify-content:center;line-height:1.05;white-space:nowrap;text-decoration:none;}
+.brand-logo strong{font-size:1.05rem;font-weight:900;letter-spacing:.04em;color:#f97316;}
+.brand-logo small{font-size:.56rem;font-weight:700;letter-spacing:.05em;line-height:1.25;margin-top:.18rem;color:#f97316;}
+.footer-logo .brand-logo{margin-bottom:.75rem;}
+@media (max-width:600px){.brand-logo strong{font-size:.82rem}.brand-logo small{font-size:.46rem}.brand-logo{max-width:155px;white-space:normal}}
