@@ -9,7 +9,7 @@ const products = [
   {id:6,name:'Chargeur 65W',price:37,image:'https://pecsipc.hu/files/uploads/2025/02/ugreen-nexode-s-65w-3-port-gan-fast-charger-eu-grey_1.jpg',category:'Accessoire',rating:4.5},
   {id:7,name:'Samsung Galaxy S24',price:620,image:'https://media.gadgetbytenepal.com/2024/01/Samsung-Galaxy-S24-Marble-Grey.jpg',category:'Smartphone',rating:4.6,new:true},
   {id:8,name:'Samsung Galaxy A55',price:245,image:'https://www.fonel.com/web/image/product.template/2501/image_1024?unique=668405e',category:'Smartphone',rating:4.4},
-  {id:9,name:'Dell XPS 13',price:880,image:'https://cdn.lesnumeriques.com/optim/product/75/75507/d49fd532-xps-13-2024-core-ultra-2_png__1200_900__overflow.jpg',category:'Ordinateur',rating:4.7},
+  {id:9,name:'Dell XPS 13',price:881,image:'https://cdn.lesnumeriques.com/optim/product/75/75507/d49fd532-xps-13-2024-core-ultra-2_png__1200_900__overflow.jpg',category:'Ordinateur',rating:4.7},
   {id:10,name:'HP Pavilion 15',price:410,image:'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510528_sd.jpg',category:'Ordinateur',rating:4.3},
   {id:11,name:'Enceinte JBL Flip 6',price:65,image:'images/jblflip6.jpeg',category:'Audio',rating:4.6,new:true},
   {id:12,name:'Casque Sony WH-1000XM5',price:22,image:'images/casquesony.jpeg',category:'Audio',rating:4.9,new:true},
