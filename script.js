@@ -1,7 +1,7 @@
 'use strict';
 
 const products = [
-  {id:1,name:'iPhone 15 Pro',price:1000,image:'images/iphone15pro.jpeg',category:'Smartphone',rating:4.8,new:true},
+  {id:1,name:'iPhone 15 Pro',price:100000,image:'images/iphone15pro.jpeg',category:'Smartphone',rating:4.8,new:true},
   {id:2,name:'MacBook Air M2',price:9000,image:'https://media.power-cdn.net/images/h-45e5d5b35ed60f9eab952fa55ceda4db/products/3746370/3746370_3_1200x1200_w_g.jpg',category:'Ordinateur',rating:4.9,new:true},
   {id:3,name:'AirPods Pro 2',price:75000,image:'https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/APAIRPRO2C_B_airpods_pro_2nd_generation_with_magsafe_case_usb_c_.jpg',category:'Audio',rating:4.7},
   {id:4,name:'iPad Pro',price:60000,image:'https://bizweb.dktcdn.net/100/459/953/products/ipad-pro-m2-silver-ede8804e-d454-4b10-b063-a5ca7a247b3d.jpg?v=1723807563663',category:'Tablette',rating:4.6},
