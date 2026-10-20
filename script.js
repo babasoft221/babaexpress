@@ -4,7 +4,7 @@ const products = [
   {id:1,name:'iPhone 15 Pro',price:100,image:'images/iphone15pro.jpeg',category:'Smartphone',rating:4.8,new:true},
   {id:2,name:'MacBook Air M2',price:95,image:'https://media.power-cdn.net/images/h-45e5d5b35ed60f9eab952fa55ceda4db/products/3746370/3746370_3_1200x1200_w_g.jpg',category:'Ordinateur',rating:4.9,new:true},
   {id:3,name:'AirPods Pro 2',price:75,image:'https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/APAIRPRO2C_B_airpods_pro_2nd_generation_with_magsafe_case_usb_c_.jpg',category:'Audio',rating:4.7},
-  {id:4,name:'iPad Pro',price:625,image:'https://bizweb.dktcdn.net/100/459/953/products/ipad-pro-m2-silver-ede8804e-d454-4b10-b063-a5ca7a247b3d.jpg?v=1723807563663',category:'Tablette',rating:4.6},
+  {id:4,name:'iPad Pro',price:620,image:'https://bizweb.dktcdn.net/100/459/953/products/ipad-pro-m2-silver-ede8804e-d454-4b10-b063-a5ca7a247b3d.jpg?v=1723807563663',category:'Tablette',rating:4.6},
   {id:5,name:'Apple Watch Ultra',price:560,image:'https://static1.nordic.pictures/37745099-thickbox_default/apple-watch-ultra-gps-cellular-49mm-alpine-loop-s-orange-mnhh3el-a.jpg',category:'Montre',rating:4.8,new:true},
   {id:6,name:'Chargeur 65W',price:37,image:'https://pecsipc.hu/files/uploads/2025/02/ugreen-nexode-s-65w-3-port-gan-fast-charger-eu-grey_1.jpg',category:'Accessoire',rating:4.5},
   {id:7,name:'Samsung Galaxy S24',price:620,image:'https://media.gadgetbytenepal.com/2024/01/Samsung-Galaxy-S24-Marble-Grey.jpg',category:'Smartphone',rating:4.6,new:true},
