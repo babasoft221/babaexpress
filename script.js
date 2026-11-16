@@ -2,25 +2,25 @@
 
 const products = [
   {id:1,name:'iPhone 15 Pro',price:75,image:'images/iphone15pro.jpeg',category:'Smartphone',rating:4.8,new:true},
-  {id:2,name:'MacBook Air M2',price:950,image:'https://media.power-cdn.net/images/h-45e5d5b35ed60f9eab952fa55ceda4db/products/3746370/3746370_3_1200x1200_w_g.jpg',category:'Ordinateur',rating:4.9,new:true},
-  {id:3,name:'AirPods Pro 2',price:175,image:'https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/APAIRPRO2C_B_airpods_pro_2nd_generation_with_magsafe_case_usb_c_.jpg',category:'Audio',rating:4.7},
-  {id:4,name:'iPad Pro',price:625,image:'https://bizweb.dktcdn.net/100/459/953/products/ipad-pro-m2-silver-ede8804e-d454-4b10-b063-a5ca7a247b3d.jpg?v=1723807563663',category:'Tablette',rating:4.6},
-  {id:5,name:'Apple Watch Ultra',price:560,image:'https://static1.nordic.pictures/37745099-thickbox_default/apple-watch-ultra-gps-cellular-49mm-alpine-loop-s-orange-mnhh3el-a.jpg',category:'Montre',rating:4.8,new:true},
+  {id:2,name:'MacBook Air M2',price:95,image:'https://media.power-cdn.net/images/h-45e5d5b35ed60f9eab952fa55ceda4db/products/3746370/3746370_3_1200x1200_w_g.jpg',category:'Ordinateur',rating:4.9,new:true},
+  {id:3,name:'AirPods Pro 2',price:17,image:'https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/APAIRPRO2C_B_airpods_pro_2nd_generation_with_magsafe_case_usb_c_.jpg',category:'Audio',rating:4.7},
+  {id:4,name:'iPad Pro',price:62,image:'https://bizweb.dktcdn.net/100/459/953/products/ipad-pro-m2-silver-ede8804e-d454-4b10-b063-a5ca7a247b3d.jpg?v=1723807563663',category:'Tablette',rating:4.6},
+  {id:5,name:'Apple Watch Ultra',price:56,image:'https://static1.nordic.pictures/37745099-thickbox_default/apple-watch-ultra-gps-cellular-49mm-alpine-loop-s-orange-mnhh3el-a.jpg',category:'Montre',rating:4.8,new:true},
   {id:6,name:'Chargeur 65W',price:37,image:'https://pecsipc.hu/files/uploads/2025/02/ugreen-nexode-s-65w-3-port-gan-fast-charger-eu-grey_1.jpg',category:'Accessoire',rating:4.5},
-  {id:7,name:'Samsung Galaxy S24',price:620,image:'https://media.gadgetbytenepal.com/2024/01/Samsung-Galaxy-S24-Marble-Grey.jpg',category:'Smartphone',rating:4.6,new:true},
-  {id:8,name:'Samsung Galaxy A55',price:245,image:'https://www.fonel.com/web/image/product.template/2501/image_1024?unique=668405e',category:'Smartphone',rating:4.4},
-  {id:9,name:'Dell XPS 13',price:881,image:'https://cdn.lesnumeriques.com/optim/product/75/75507/d49fd532-xps-13-2024-core-ultra-2_png__1200_900__overflow.jpg',category:'Ordinateur',rating:4.7},
-  {id:10,name:'HP Pavilion 15',price:410,image:'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510528_sd.jpg',category:'Ordinateur',rating:4.3},
+  {id:7,name:'Samsung Galaxy S24',price:62,image:'https://media.gadgetbytenepal.com/2024/01/Samsung-Galaxy-S24-Marble-Grey.jpg',category:'Smartphone',rating:4.6,new:true},
+  {id:8,name:'Samsung Galaxy A55',price:24,image:'https://www.fonel.com/web/image/product.template/2501/image_1024?unique=668405e',category:'Smartphone',rating:4.4},
+  {id:9,name:'Dell XPS 13',price:88,image:'https://cdn.lesnumeriques.com/optim/product/75/75507/d49fd532-xps-13-2024-core-ultra-2_png__1200_900__overflow.jpg',category:'Ordinateur',rating:4.7},
+  {id:10,name:'HP Pavilion 15',price:41,image:'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6510/6510528_sd.jpg',category:'Ordinateur',rating:4.3},
   {id:11,name:'Enceinte JBL Flip 6',price:65,image:'images/jblflip6.jpeg',category:'Audio',rating:4.6,new:true},
   {id:12,name:'Casque Sony WH-1000XM5',price:22,image:'images/casquesony.jpeg',category:'Audio',rating:4.9,new:true},
-  {id:13,name:'Samsung Galaxy Tab S9',price:480,image:'https://www.arlt.com/out/pictures/master/product/1/Samsung_SM-X710NZAAEUE_INT_1.jpg',category:'Tablette',rating:4.5},
+  {id:13,name:'Samsung Galaxy Tab S9',price:48,image:'https://www.arlt.com/out/pictures/master/product/1/Samsung_SM-X710NZAAEUE_INT_1.jpg',category:'Tablette',rating:4.5},
   {id:14,name:'Montre connectée Amazfit',price:65,image:'https://storeimages.kickmobiles.com/ebayimages/amazfit/gts_4/wifi_bt/black/1.jpg',category:'Montre',rating:4.2},
   {id:15,name:'Batterie externe 20000mAh',price:22,image:'images/powerbank.jpeg',category:'Accessoire',rating:4.4},
   {id:16,name:'Support téléphone voiture',price:80,image:'https://item-shopping.c.yimg.jp/i/n/amuza-butiko_20240819-17523_6_d_20240819104757',category:'Accessoire',rating:4.1},
   {id:17,name:'Sac à dos PC 15"',price:28,image:'https://coralrsprod.blob.core.windows.net/storage/media/images/products/2026/03/0-56691700-1771500018_6d3eef60.jpg',category:'Accessoire',rating:4.5},
   {id:18,name:'Souris sans fil Logitech',price:18,image:'https://techlifebd.com/public/uploads/products/meta/WOnZksWeh1duLIzeNpojJbJMhrJTzpCWTPY1vQ9X.jpeg',category:'Accessoire',rating:4.6},
-{id:19,name:'Téléviseur Samsung 55" Smart TV',price:425,image:'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=85',category:'Téléviseur',rating:4.8,new:true},
-  {id:20,name:'Téléviseur LG 50" 4K',price:365,image:'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=85',category:'Téléviseur',rating:4.6},
+{id:19,name:'Téléviseur Samsung 55" Smart TV',price:42,image:'https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=85',category:'Téléviseur',rating:4.8,new:true},
+  {id:20,name:'Téléviseur LG 50" 4K',price:36,image:'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=85',category:'Téléviseur',rating:4.6},
   {id:21,name:'Panier fruits & légumes bio',price:15,image:'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85',category:'Produits bio',rating:4.8,new:true},
   {id:22,name:'Huile d’olive bio premium',price:12,image:'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=900&q=85',category:'Produits bio',rating:4.7},
   {id:23,name:'Coffret soins visage',price:18,image:'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85',category:'Cosmétiques',rating:4.7,new:true},
@@ -77,9 +77,24 @@ window.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.category-shortcut').forEach(btn=>btn.addEventListener('click',()=>{activeCategory=btn.dataset.shortcut;renderCategoryFilters();renderProducts();$('products').scrollIntoView({behavior:'smooth'});}));$('closeService').addEventListener('click',closeService);$('serviceForm').addEventListener('submit',submitService);
   document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=document.querySelector(a.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});$('navMenu').classList.remove('active');$('hamburger').classList.remove('active')}}));
   $('hamburger').addEventListener('click',()=>{$('navMenu').classList.toggle('active');$('hamburger').classList.toggle('active')});
-  window.addEventListener('click',e=>{['cartModal','ticketModal','authModal','serviceModal'].forEach(id=>{const m=$(id);if(e.target===m)m.classList.remove('open')})});
+  window.addEventListener('click',e=>{['cartModal','ticketModal','authModal','serviceModal','productDetailsModal'].forEach(id=>{const m=$(id);if(e.target===m)m.classList.remove('open')})});
   initLiveMap();
-  $('productsGrid').addEventListener('click',onGridClick);$('clearCartBtn').addEventListener('click',clearCart);
+  $('productsGrid').addEventListener('click',onGridClick);$('clearCartBtn').addEventListener('click',clearCart);$('closeProductDetails').addEventListener('click',closeProductDetails);$('productDetailsModal').addEventListener('click',e=>{if(e.target===$('productDetailsModal'))closeProductDetails()});
+  // Fermeture accessible des fenêtres et du menu sur mobile.
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      ['cartModal','ticketModal','authModal','serviceModal','productDetailsModal'].forEach(id=>$(id)?.classList.remove('open'));
+      $('navMenu')?.classList.remove('active');
+      $('hamburger')?.classList.remove('active');
+    }
+  });
+  document.addEventListener('click',e=>{
+    const menu=$('navMenu'),toggle=$('hamburger');
+    if(menu?.classList.contains('active') && !menu.contains(e.target) && !toggle?.contains(e.target)){
+      menu.classList.remove('active');toggle?.classList.remove('active');
+    }
+  });
+
 });
 
 const FALLBACK_IMG='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#e8edf5"/><text x="100" y="118" font-size="70" text-anchor="middle">🛍️</text></svg>');
@@ -95,13 +110,35 @@ function renderProducts(){
   const grid=$('productsGrid');
   const filtered=products.filter(p=>(activeCategory==='Tous'||(activeCategory==='Favoris'?favs.includes(p.id):p.category===activeCategory))&&(!searchTerm||`${p.name} ${p.category}`.toLowerCase().includes(searchTerm)));
   $('productCounter').textContent=`${filtered.length} produit${filtered.length>1?'s':''}`;
-  grid.innerHTML=filtered.map((p,i)=>`<article class="product-card" data-id="${p.id}" style="animation-delay:${i*35}ms"><div class="product-image ${p.new?'new':''}"><button type="button" class="fav-btn ${favs.includes(p.id)?'active':''}" data-fav="${p.id}" aria-label="Ajouter aux favoris"><i class="fas fa-heart"></i></button><img src="${p.image}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="imgFallback(this)"></div><div class="product-info"><h3>${escapeHtml(p.name)}</h3><div class="product-rating">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}<span style="color:var(--muted);margin-left:.4rem">(${p.rating})</span></div><div class="product-price">${money(p.price)}</div><button type="button" class="product-add" data-add="${p.id}"><i class="fas fa-cart-plus"></i> Ajouter au panier</button></div></article>`).join('');
+  grid.innerHTML=filtered.map((p,i)=>`<article class="product-card" data-id="${p.id}" style="animation-delay:${i*35}ms"><div class="product-image ${p.new?'new':''}"><button type="button" class="fav-btn ${favs.includes(p.id)?'active':''}" data-fav="${p.id}" aria-label="Ajouter aux favoris"><i class="fas fa-heart"></i></button><img src="${p.image}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="imgFallback(this)"></div><div class="product-info"><h3>${escapeHtml(p.name)}</h3><p class="product-short-description">${escapeHtml(p.description || `${p.category} sélectionné avec soin par BABA EXPRESS.`)}</p><div class="product-card-actions"><button type="button" class="product-details-btn" data-details="${p.id}"><i class="fas fa-circle-info"></i> Détails produit</button></div><div class="product-rating">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}<span style="color:var(--muted);margin-left:.4rem">(${p.rating})</span></div><div class="product-price">${money(p.price)}</div><button type="button" class="product-add" data-add="${p.id}"><i class="fas fa-cart-plus"></i> + Ajouter au panier</button></div></article>`).join('');
   $('emptyProducts').hidden=filtered.length>0;
 }
 function onGridClick(e){
+  const details=e.target.closest('[data-details]');if(details){openProductDetails(Number(details.dataset.details));return}
   const add=e.target.closest('[data-add]');if(add){addToCart(Number(add.dataset.add),add);return}
   const fav=e.target.closest('[data-fav]');if(fav)toggleFav(Number(fav.dataset.fav),fav);
 }
+function openProductDetails(id){
+  const p=products.find(x=>x.id===id);if(!p)return;
+  const descriptions={
+    'Restaurant':'Un produit gourmand sélectionné par BABA Express. Consultez les informations de commande et ajoutez-le à votre panier.',
+    'Smartphone':'Un smartphone pensé pour accompagner vos usages quotidiens : communication, applications, photos et divertissement.',
+    'Ordinateur':'Un ordinateur adapté au travail, aux études et au divertissement. Contactez BABA Express pour confirmer la disponibilité.',
+    'Audio':'Un accessoire audio pour profiter de votre musique, de vos appels et de vos contenus préférés.',
+    'Téléviseur':'Un téléviseur pour profiter de vos films, séries et programmes à domicile.',
+    'Produits bio':'Un produit sélectionné pour compléter vos achats du quotidien.',
+    'Cosmétiques':'Un article de soin ou de beauté pour votre routine quotidienne.',
+    'Vêtements':'Un article vestimentaire à choisir selon votre style et votre taille.',
+    'Chaussures':'Une paire à choisir selon votre pointure et vos préférences.'
+  };
+  const description=p.description||descriptions[p.category]||'Découvrez ce produit proposé par BABA Express. Contactez-nous pour confirmer les détails et la disponibilité.';
+  $('productDetailsTitle').textContent=p.name;
+  $('productDetailsBody').innerHTML=`<div class="product-details-layout"><img class="product-details-image" src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}" onerror="imgFallback(this)"><div class="product-details-info"><span class="product-details-category">${escapeHtml(p.category)}</span><div class="product-rating">${'★'.repeat(Math.floor(p.rating))}${'☆'.repeat(5-Math.floor(p.rating))}<span> (${p.rating}/5)</span></div><strong class="product-details-price">${money(p.price)}</strong><p>${escapeHtml(description)}</p><button type="button" class="product-add details-add-btn" data-detail-add="${p.id}"><i class="fas fa-cart-plus"></i> Ajouter au panier</button></div></div>`;
+  $('productDetailsModal').classList.add('open');
+  $('productDetailsBody').querySelector('[data-detail-add]').addEventListener('click',e=>{addToCart(id,e.currentTarget);closeProductDetails()});
+}
+function closeProductDetails(){$('productDetailsModal').classList.remove('open')}
+
 function toggleFav(id,btn){
   favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];
   try{localStorage.setItem('babaFavs',JSON.stringify(favs))}catch(_){}
