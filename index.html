@@ -24,6 +24,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#delivery">Livraison</a></li>
           <li><a href="#about">À propos</a></li>
+          <li><a href="#avis-clients">Avis clients</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-icons">
@@ -50,21 +51,15 @@
         <div class="banner-dots" id="bannerDots"><button class="active" data-slide="0" aria-label="Affiche 1"></button><button data-slide="1" aria-label="Affiche 2"></button><button data-slide="2" aria-label="Affiche 3"></button></div>
       </div>
       <div class="hero-content">
-        <span class="eyebrow"><i class="fas fa-bolt"></i> BABA Express Dakar</span>
-        <h1>Livraison Express<br><span class="highlight">24h/24</span></h1>
+        <span class="eyebrow"> BABA Express Dakar</span>
+        <h1>Livraison Express<br><span class="highlight">24h/7</span></h1>
         <p>Commandez vos produits, réservez une course ou un taxi privé et recevez un service rapide et fiable.</p>
         <div class="hero-buttons">
           <button class="btn-primary" onclick="scrollToProducts()">Commander maintenant</button>
           <a class="btn-secondary" href="#services">Découvrir les services</a>
         </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat glass-3d"><h3>5000+</h3><p>Commandes livrées</p></div>
-        <div class="stat glass-3d"><h3>24h</h3><p>Service express</p></div>
-        <div class="stat glass-3d"><h3>98%</h3><p>Satisfaction client</p></div>
-      </div>
-    </section>
-
+      
     <section id="products" class="products section-3d">
       <div class="container">
         <div class="section-heading">
@@ -79,6 +74,18 @@
         <div class="category-filters" id="categoryFilters"></div>
         <div class="products-grid" id="productsGrid"></div>
         <div class="empty-state" id="emptyProducts" hidden><i class="fas fa-box-open"></i><h3>Aucun produit trouvé</h3><p>Essayez un autre mot-clé ou une autre catégorie.</p></div>
+      </div>
+    </section>
+
+    <section id="avis-clients" class="reviews-section section-3d">
+      <div class="container">
+        <div class="section-heading centered"><span class="eyebrow">Ils nous font confiance</span><h2 class="section-title">Avis de nos clients</h2><p>Quelques exemples de retours clients à remplacer par vos témoignages réels.</p></div>
+        <div class="reviews-grid">
+          <article class="review-card glass-3d"><div class="review-stars" aria-label="5 étoiles">★★★★★</div><p>« Service rapide et commande reçue dans de bonnes conditions. Merci BABA Express ! »</p><div class="review-author"><span class="review-avatar">A</span><div><strong>Client satisfait</strong><small>Livraison</small></div></div></article>
+          <article class="review-card glass-3d"><div class="review-stars" aria-label="5 étoiles">★★★★★</div><p>« Une équipe disponible et une expérience de commande simple. Je recommande. »</p><div class="review-author"><span class="review-avatar">M</span><div><strong>Cliente satisfaite</strong><small>Commande produit</small></div></div></article>
+          <article class="review-card glass-3d"><div class="review-stars" aria-label="5 étoiles">★★★★★</div><p>« Très pratique pour organiser une course et se faire livrer à Dakar. »</p><div class="review-author"><span class="review-avatar">S</span><div><strong>Client satisfait</strong><small>Course rapide</small></div></div></article>
+        </div>
+        <p class="reviews-disclaimer">Témoignages de démonstration — remplacez-les par les avis authentiques de vos clients avant publication.</p>
       </div>
     </section>
 
@@ -155,6 +162,14 @@
 
     <section id="about" class="about section-3d"><div class="container"><div class="about-card glass-3d"><span class="eyebrow">BABA Express</span><h2 class="section-title">Un service pensé pour Dakar</h2><p>BABA Express combine e-commerce, livraison, course rapide et taxi privé dans une interface moderne, responsive et simple à utiliser.</p><div class="about-pills"><span><i class="fas fa-mobile-alt"></i> Mobile friendly</span><span><i class="fas fa-bolt"></i> Rapide</span><span><i class="fas fa-map-marked-alt"></i> Suivi</span></div></div></div></section>
   </main>
+
+  <!-- Détails produit -->
+  <div class="modal" id="productDetailsModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="productDetailsTitle">
+    <div class="modal-content product-details-content">
+      <div class="modal-header"><h3 id="productDetailsTitle">Détails du produit</h3><button class="close" id="closeProductDetails" aria-label="Fermer">&times;</button></div>
+      <div id="productDetailsBody"></div>
+    </div>
+  </div>
 
   <!-- Panier -->
   <div class="modal" id="cartModal" aria-hidden="true"><div class="modal-content cart-modal-content"><div class="modal-header"><h3><i class="fas fa-shopping-cart"></i> Mon Panier</h3><button class="close" id="closeCart" aria-label="Fermer">&times;</button></div><div class="cart-items" id="cartItems"></div><button type="button" class="clear-cart" id="clearCartBtn" hidden>Vider le panier</button><div class="cart-total"><span>Total</span><strong id="cartTotal">0 F</strong></div><div class="delivery-form"><h4>Informations de livraison</h4><input type="text" id="customerName" placeholder="Nom complet"><input type="tel" id="customerPhone" placeholder="Numéro de téléphone"><textarea id="deliveryAddress" placeholder="Adresse de livraison (quartier, rue, ville...)" rows="2"></textarea><select id="paymentMethod"><option value="À la livraison">Paiement à la livraison</option><option value="Wave">Wave</option><option value="Orange Money">Orange Money</option></select></div><button class="btn-primary checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Valider la commande</button></div></div>
